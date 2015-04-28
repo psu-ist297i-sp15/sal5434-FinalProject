@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mixin.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @mixin.amount %>
+</p>
+
+<%= link_to 'Edit', edit_mixin_path(@mixin) %> |
+<%= link_to 'Back', mixins_path %>
