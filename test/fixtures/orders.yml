@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_active: false
+  pickup: 2015-04-28 20:27:07
+
+two:
+  is_active: false
+  pickup: 2015-04-28 20:27:07

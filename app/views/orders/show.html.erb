@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @order.is_active %>
+</p>
+
+<p>
+  <strong>Pickup:</strong>
+  <%= @order.pickup %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

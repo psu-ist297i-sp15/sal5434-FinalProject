@@ -1,0 +1,35 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    Shake:<br>
+    <% for s in Shake.all %>
+      <%= radio_button_tag("order[shake]", s.id) %><%= s.name %><br>
+    <% end %>
+  </div>
+  <div class="field">
+    Toppings:<br>
+    <% for t in Topping.all %>
+      <%= check_box_tag("order[topping]" , t.id) %><%= t.name %><br>
+    <% end %>
+  <div class="field">
+    <%= f.label :is_active %><br>
+    <%= f.check_box :is_active %>
+  </div>
+  <div class="field">
+    <%= f.label :pickup %><br>
+    <%= f.datetime_select :pickup %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
